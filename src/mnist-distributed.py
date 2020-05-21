@@ -67,7 +67,7 @@ def train(gpu, args):
     # Wrap the model
     model = nn.parallel.DistributedDataParallel(model, device_ids=[gpu])
     # Data loading code
-    train_dataset = torchvision.datasets.MNIST(root='./data',
+    train_dataset = torchvision.datasets.MNIST(root='~/data',
                                                train=True,
                                                transform=transforms.ToTensor(),
                                                download=True)
